@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400&family=Oswald:wght@700&display=swap');
+
+:root {
+	/* color */
+  --main-color: #FFFFFF;
+	--second-color: #0A0A0A;
+	--active-color: #0000FF;
+	--dark-color: #000000;
+	--low-dark-color: #F0F0F0;
+	/* fonts */
+	--main-font: 'Open Sans';
+	--second-font: 'Oswald';
+}
+
+body {
+	margin: 0;
+	font-family: var(--main-font), sans-serif;
+	/* font-family: 'Oswald', sans-serif; */
+	font-size: 13px;
+	line-height: 1.5;
+	background: var(--main-color);
+	color: var(--second-color);
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	cursor: none;
+}
+* {
+	font-family: var(--main-font), sans-serif;
+	color: var(--second-color);
+}
+/* fonts */
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--second-font), sans-serif;
+	margin: 0 0 0.5em 0;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 3.65em;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+/* Links */
+a {
+	/* color: var(--active-color); */
+  transition: all .32s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+a:hover, a:focus {
+	color: var(--active-color);
+	text-decoration: none;
+}
+/* svg hover */
+a svg {
+	transform: scale(0.85);
+	transition: all .21s cubic-bezier(0.64, 0.57, 0.67, 1.53); }
+a:hover svg, a:focus svg {
+	fill: var(--active-color);
+	transform: scale(1); }
+button svg {
+	transform: scale(0.98);
+	transition: all .21s cubic-bezier(0.64, 0.57, 0.67, 1.53); }
+button:hover svg, button:focus svg {
+		fill: var(--active-color);
+		transform: scale(1.11); }
+
+/* buttons */
+button {
+	cursor: pointer;
+	border: none;
+	background: none;
+  /* background: var(--low-dark-color); */
+  color: var(--active-color);
+}
+button:hover,
+button:focus {
+	outline: none;
+	border: none;
+	background: none;
+  /* background: var(--main-color); */
+}
+
+@media (min-width: 400px) {
+	body { font-size: 14px; }
+	h1 { font-size: 4.35em; }
+	h2 { font-size: 1.5em; }
+}
+@media (min-width: 720px) {
+	body { font-size: 16px; }
+	h1 { font-size: 6.25em; }
+	h2 { font-size: 3em; }
+}
